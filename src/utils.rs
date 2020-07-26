@@ -14,6 +14,10 @@ pub struct AppConfig {
     pub false_chr: char,
     pub future_chr: char,
 
+    // Optionally configure to use a server
+    pub server: Option<String>,
+    pub server_key: Option<String>,
+
     // view dimensions
     pub view_width: usize,
     pub view_height: usize,
@@ -51,6 +55,8 @@ pub fn default_config() -> AppConfig {
         true_chr: '·',
         false_chr: '·',
         future_chr: '·',
+        server: None,
+        server_key: None,
         view_width: 25,
         view_height: 8,
         grid_width: 3,
